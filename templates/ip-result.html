@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>CONSULTA IP</title>
+
+    <style>
+      html {
+        font-size: 62.5%;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
+      }
+
+      body {
+        background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      }
+      .cep-consulta {
+        max-width: 600px;
+        background-color: #4d5b7d;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+      .cep-consulta__text {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-block: 20px;
+        letter-spacing: 1px;
+        color: #282b33;
+      }
+      .cep-consulta__lista {
+        list-style: none;
+        padding-block: 30px;
+        border-top: 2px solid #3d404a;
+      }
+      .cep-consulta__link {
+        padding-bottom: 15px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #282b33;
+      }
+      .cep-consulta__response {
+        font-weight: 500;
+        color: #e0e4f7;
+      }
+      .button-class {
+        margin-left: 15px;
+        padding: 7px 12px;
+        background-color: #dbe0ec;
+        color: #4d5b7d;
+        text-decoration: none;
+        font-size: 1.3rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cep-consulta">
+      <h2 class="cep-consulta__text">VEJA SEU IP AQUI</h2>
+
+      <div class="cep-consulta__resultado">
+        <ul class="cep-consulta__lista">
+          <li class="cep-consulta__link">
+            PAÍS:
+            <span class="cep-consulta__response">{%RESPPAIS%}</span>
+          </li>
+          <li class="cep-consulta__link">
+            ESTADO:
+            <span class="cep-consulta__response">{%RESPREGION%}</span>
+          </li>
+          <li class="cep-consulta__link">
+            CIDADE: <span class="cep-consulta__response">{%RESPCITY%}</span>
+          </li>
+          <li class="cep-consulta__link">
+            CEP: <span class="cep-consulta__response">{%RESPCEP%}</span>
+            <a href="/address" class="button-class">VER ENDEREÇO</a>
+          </li>
+          <li class="cep-consulta__link">
+            IP: <span class="cep-consulta__response">{%RESPIP%}</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
